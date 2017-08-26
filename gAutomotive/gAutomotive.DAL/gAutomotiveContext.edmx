@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="gautomotiveModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar(max)" />
+          <Property Name="CustomerTelephone" Type="nvarchar(max)" />
+          <Property Name="Mark" Type="nvarchar" MaxLength="250" />
+          <Property Name="WIN" Type="nvarchar" MaxLength="250" />
+          <Property Name="OrderAcceptanceDate" Type="date" />
+          <Property Name="OrderSellDate" Type="date" />
+          <Property Name="OriginalPrice" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SellPrice" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Profit" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="DetailCode" Type="nvarchar(max)" />
+          <Property Name="DetailReplaceCode" Type="nvarchar(max)" />
+          <Property Name="Weight/KG" Type="int" />
+        </EntityType>
+        <EntityContainer Name="gautomotiveModelStoreContainer">
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="gautomotiveModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerTelephone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="WIN" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="OrderAcceptanceDate" Type="DateTime" Precision="0" />
+          <Property Name="OrderSellDate" Type="DateTime" Precision="0" />
+          <Property Name="OriginalPrice" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SellPrice" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Profit" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="DetailCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DetailReplaceCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Weight_KG" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="AutomoiveEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="gautomotiveModelStoreContainer" CdmEntityContainer="AutomoiveEntities">
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="gautomotiveModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CustomerTelephone" ColumnName="CustomerTelephone" />
+                <ScalarProperty Name="Mark" ColumnName="Mark" />
+                <ScalarProperty Name="WIN" ColumnName="WIN" />
+                <ScalarProperty Name="OrderAcceptanceDate" ColumnName="OrderAcceptanceDate" />
+                <ScalarProperty Name="OrderSellDate" ColumnName="OrderSellDate" />
+                <ScalarProperty Name="OriginalPrice" ColumnName="OriginalPrice" />
+                <ScalarProperty Name="SellPrice" ColumnName="SellPrice" />
+                <ScalarProperty Name="Profit" ColumnName="Profit" />
+                <ScalarProperty Name="DetailCode" ColumnName="DetailCode" />
+                <ScalarProperty Name="DetailReplaceCode" ColumnName="DetailReplaceCode" />
+                <ScalarProperty Name="Weight_KG" ColumnName="Weight/KG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

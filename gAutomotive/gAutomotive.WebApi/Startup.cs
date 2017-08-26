@@ -1,6 +1,6 @@
-﻿using System.Web.Http;
-using Microsoft.Owin;
+﻿using Microsoft.Owin;
 using Owin;
+using System.Web.Http;
 
 [assembly: OwinStartup(typeof(gAutomotive.WebApi.Startup))]
 
@@ -26,7 +26,7 @@ namespace gAutomotive.WebApi
             config.MapHttpAttributeRoutes();
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "api/{controller}/{action}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
         }

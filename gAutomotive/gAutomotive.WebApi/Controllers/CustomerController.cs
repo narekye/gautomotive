@@ -1,20 +1,15 @@
-﻿using System.Web.Http;
-using gAutomotive.DAL.Repository;
+﻿using gAutomotive.WebApi.Common;
+using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace gAutomotive.WebApi.Controllers
 {
-    public class CustomerController : ApiController
+    public class CustomerController : BaseApiController
     {
-        // public IGAutomotive GAutomotive { get; set; }
-        public CustomerController()
+        public async Task<IHttpActionResult> GetAllCustomers()
         {
-            // GAutomotive = automotive;
-        }
-
-        public IHttpActionResult Get()
-        {
-            // GAutomotive.GetAllCustomersAsync();
-            return this.Ok();
+            await Task.WhenAll();
+            return SuccessResponse(new object());
         }
     }
 }

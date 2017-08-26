@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gAutomotive.DAL", "gAutomot
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gAutomoive.LocalClient", "gAutomoive.LocalClient\gAutomoive.LocalClient.csproj", "{8D02224C-F183-4565-BF7E-C0CB2AC06D62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gAutomotive.WebApi", "gAutomotive.WebApi\gAutomotive.WebApi.csproj", "{6C97AB80-6EA4-4773-A5A0-FED569198310}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gAutomotive.WebApi.Tests", "gAutomotive.WebApi.Tests\gAutomotive.WebApi.Tests.csproj", "{4D5A4945-7BC0-4BD1-ADE5-95538C686B3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{8D02224C-F183-4565-BF7E-C0CB2AC06D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D02224C-F183-4565-BF7E-C0CB2AC06D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D02224C-F183-4565-BF7E-C0CB2AC06D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C97AB80-6EA4-4773-A5A0-FED569198310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C97AB80-6EA4-4773-A5A0-FED569198310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C97AB80-6EA4-4773-A5A0-FED569198310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C97AB80-6EA4-4773-A5A0-FED569198310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D5A4945-7BC0-4BD1-ADE5-95538C686B3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D5A4945-7BC0-4BD1-ADE5-95538C686B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D5A4945-7BC0-4BD1-ADE5-95538C686B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D5A4945-7BC0-4BD1-ADE5-95538C686B3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,5 +51,7 @@ Global
 		{AAAFDF07-9F42-43C3-AA83-7859541B41D5} = {070BBF65-4CA9-4B62-98BD-8D54634976D3}
 		{DFA1389F-9204-464C-B087-9524D0838C7A} = {070BBF65-4CA9-4B62-98BD-8D54634976D3}
 		{8D02224C-F183-4565-BF7E-C0CB2AC06D62} = {070BBF65-4CA9-4B62-98BD-8D54634976D3}
+		{6C97AB80-6EA4-4773-A5A0-FED569198310} = {070BBF65-4CA9-4B62-98BD-8D54634976D3}
+		{4D5A4945-7BC0-4BD1-ADE5-95538C686B3A} = {070BBF65-4CA9-4B62-98BD-8D54634976D3}
 	EndGlobalSection
 EndGlobal

@@ -2,7 +2,7 @@
 
 namespace gAutomotive.DAL
 {
-    public partial class AutomotiveEntities : IAutomotiveEntities
+    public partial class gautomotiveEntities : IAutomotiveEntities
     {
         public new Task SaveChanges()
         {

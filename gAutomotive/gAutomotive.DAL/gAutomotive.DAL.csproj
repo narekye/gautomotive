@@ -53,24 +53,24 @@
   <ItemGroup>
     <Compile Include="AutomotiveEntities.cs" />
     <Compile Include="Customer.cs">
-      <DependentUpon>gAutomotiveContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="gAutomotiveContext.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>gAutomotiveContext.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="gAutomotiveContext.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>gAutomotiveContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="gAutomotiveContext.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>gAutomotiveContext.edmx</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="IAutomotiveEntities.cs" />
+    <Compile Include="Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Repository\Core\BaseGAutomotive.cs" />
     <Compile Include="Repository\Core\IBaseGAutomotive.cs" />
     <Compile Include="Repository\GAutomotive.cs" />
@@ -78,32 +78,30 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="gAutomotiveContext.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>gAutomotiveContext.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
-    <None Include="gAutomotiveContext.edmx.diagram">
-      <DependentUpon>gAutomotiveContext.edmx</DependentUpon>
+    <EntityDeploy Include="Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="gAutomotiveContext.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>gAutomotiveContext.edmx</DependentUpon>
-      <LastGenOutput>gAutomotiveContext.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="gAutomotiveContext.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>gAutomotiveContext.edmx</DependentUpon>
-      <LastGenOutput>gAutomotiveContext.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

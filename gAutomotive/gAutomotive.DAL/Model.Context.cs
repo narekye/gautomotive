@@ -13,10 +13,10 @@ namespace gAutomotive.DAL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AutomotiveEntities : DbContext
+    public partial class gautomotiveEntities : DbContext
     {
-        public AutomotiveEntities()
-            : base("name=AutomoiveEntities")
+        public gautomotiveEntities()
+            : base("name=gautomotiveEntities")
         {
         }
     

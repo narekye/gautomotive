@@ -4,7 +4,7 @@ namespace gAutomotive.DAL.Repository.Core
 {
     public class BaseGAutomotiveDAL
     {
-        public IAutomotiveEntities Database { get; private set; } = new AutomotiveEntities();
+        public IAutomotiveEntities Database { get; private set; } = new gautomotiveEntities();
         
         public async Task SaveChanges()
         {

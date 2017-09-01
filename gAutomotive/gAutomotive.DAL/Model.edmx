@@ -4,12 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="gautomotiveModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="gautomotiveModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CustomerName" Type="nvarchar(max)" />
           <Property Name="CustomerTelephone" Type="nvarchar(max)" />
           <Property Name="Mark" Type="nvarchar" MaxLength="250" />
@@ -26,7 +26,8 @@
         <EntityContainer Name="gautomotiveModelStoreContainer">
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="gautomotiveModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -34,7 +35,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CustomerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="CustomerTelephone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Mark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
@@ -48,7 +49,7 @@
           <Property Name="DetailReplaceCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Weight_KG" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="AutomoiveEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="gautomotiveEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Customers" EntityType="Self.Customer" />
         </EntityContainer>
       </Schema>
@@ -56,7 +57,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="gautomotiveModelStoreContainer" CdmEntityContainer="AutomoiveEntities">
+        <EntityContainerMapping StorageEntityContainer="gautomotiveModelStoreContainer" CdmEntityContainer="gautomotiveEntities">
           <EntitySetMapping Name="Customers">
             <EntityTypeMapping TypeName="gautomotiveModel.Customer">
               <MappingFragment StoreEntitySet="Customer">

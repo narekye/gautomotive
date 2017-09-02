@@ -113,6 +113,10 @@
       <Project>{dfa1389f-9204-464c-b087-9524d0838c7a}</Project>
       <Name>gAutomotive.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\gAutomotive.Database\gAutomotive.Database.sqlproj">
+      <Project>{aaafdf07-9f42-43c3-aa83-7859541b41d5}</Project>
+      <Name>gAutomotive.Database</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

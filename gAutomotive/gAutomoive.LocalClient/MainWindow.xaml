@@ -11,13 +11,8 @@
         <CollectionViewSource x:Key="customerViewSource" d:DesignSource="{d:DesignInstance {x:Type DAL:Customer}, CreateList=True}"/>
     </Window.Resources>
     <Grid Width="1172" HorizontalAlignment="Left" Margin="0,0,-86,-3">
-
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="155" Margin="313,300,0,0" Stroke="Black" VerticalAlignment="Top" Width="350"/>
-
-
-
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="463" Margin="1,299,0,0" Stroke="Black" VerticalAlignment="Top" Width="304"/>
-
         <DataGrid  HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalAlignment="Stretch" x:Name="DataGrid" Margin="2,0,81,490"/>
         <Grid x:Name="grid1" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="24,310,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
@@ -56,8 +51,6 @@
             <DatePicker x:Name="orderSellDateDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,4,0,4" Grid.Row="7" SelectedDate="{Binding OrderSellDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center"/>
             <Label Content="Original Price:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="8" VerticalAlignment="Center"/>
             <TextBox x:Name="originalPriceTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,0,4" Grid.Row="8" Text="{Binding OriginalPrice, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
-            <Label Content="Profit:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="9" VerticalAlignment="Center"/>
-            <TextBox x:Name="profitTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,0,4" Grid.Row="9" Text="{Binding Profit, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
             <Label Content="Sell Price:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="10" VerticalAlignment="Center" Grid.RowSpan="2"/>
             <TextBox x:Name="sellPriceTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,0,4" Grid.Row="10" Text="{Binding SellPrice, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120" Grid.RowSpan="2"/>
             <Label Content="Weight KG:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="12" VerticalAlignment="Center"/>
@@ -68,7 +61,7 @@
         <Button x:Name="button1" Content="Go" HorizontalAlignment="Left" Height="36" Margin="336,362,0,0" VerticalAlignment="Top" Width="310" Click="button1_Click"/>
         <TextBox x:Name="phonetext" HorizontalAlignment="Left" Height="25" Margin="336,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
         <Label x:Name="label" Content="Phone number" HorizontalAlignment="Left" Height="25" Margin="501,321,0,0" VerticalAlignment="Top" Width="129"/>
-        <Button x:Name="button" Content="Save" HorizontalAlignment="Left" Height="21" Margin="166,731,0,0" VerticalAlignment="Top" Width="118"/>
+        <Button x:Name="button" Content="Save" HorizontalAlignment="Left" Height="21" Margin="97,683,0,0" VerticalAlignment="Top" Width="118"/>
         <Button x:Name="button3" Content="Reload" HorizontalAlignment="Left" Margin="336,422,0,0" VerticalAlignment="Top" Width="75" Click="button3_Click"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="463" Margin="778,299,0,0" Stroke="Black" VerticalAlignment="Top" Width="304"/>
         <Grid x:Name="grid1_Copy" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="801,310,0,0" VerticalAlignment="Top">
